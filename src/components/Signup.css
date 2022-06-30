@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    text-transform: capitalize;
+}
+
+body {
+    background-color: #f8f7f5f2;
+}
+
+span {
+    color: blue;
+}
+
+.container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 4rem 7%;
+}
+
+.row .content {
+
+    flex: 1 1 40rem;
+    padding: 3rem;
+}
+
+.row .content h1 {
+    font-size: 4rem;
+}
+
+.row .content p {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+}
+
+.row .form-container {
+    padding: 2rem;
+    flex: 1 1 40rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background-color: white;
+}
+.row .form-container form {
+  padding: 1rem;
+}
+.row .form-container  form .names {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.row .form-container form input {
+    border-radius: .3rem;
+    color: black;
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    border: .1rem solid rgb(151, 144, 144);
+}
+
+.row .form-container form h3 {
+    font-size: 1.3rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+#password {
+    display: block;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#email {
+    display: block;
+    width: 100%;
+}
+
+#submit-btn {
+    border-radius: .2rem;
+    color: white;
+    display: block;
+    background-color: blue;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+    margin: 3rem 0;
+}
+
+.form-container form .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: blue;
+}
+
+.form-container form .social i {
+    font-size: 1.3rem;
+    margin-left: 3rem;
+}
+@media (max-width:1515px)
+{
+    .row .form-container form .names .first{
+        width: 45%;
+    }
+    .row .form-container form .names .last{
+        width: 45%;
+    }
+}
+@media (max-width:670px) {
+    .row .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .row .content p {
+        font-size: 1.3rem;
+    }
+
+    .row .form-container form .names {
+        flex-direction: column;
+    }
+
+    .row .form-container form .names .first {
+        width: 100%;
+    }
+
+    .row .form-container form .names .last {
+        width: 100%;
+    }
+
+    .row .form-container form input {
+        display: block;
+        width: 100%;
+
+    }
+
+    .row .form-container form .social i {
+        font-size: 1rem;
+        margin-left: 2rem;
+    }
+
+}
