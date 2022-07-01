@@ -5,6 +5,8 @@ const Signup = () => {
     const { register,reset, handleSubmit,formState:{errors} } = useForm();
     const onSubmit = (data) => {
         console.log(data);
+        console.log(data[Object.keys(data)[0]])//printing the user firstname
+        alert("welcome to the website "+data[Object.keys(data)[0]])
         reset();
     }
     return (
@@ -19,11 +21,11 @@ const Signup = () => {
                 <div className="form-container">
                     <form onSubmit={handleSubmit(onSubmit)}  >
                         <div className='names'>
-                            <input name="firstName" type="text" required className='first' placeholder="First name"  {...register("firstName")} />
-                            <input name="lastName" type="text" required className='last' placeholder="Last name" {...register("lastName")} />
+                            <input name="firstName" type="text"  className='first' placeholder="First name"  {...register("firstName",{required:true})} />
+                            <input name="lastName" type="text"  className='last' placeholder="Last name" {...register("lastName",{required:true})} />
                         </div>
-                        <input  name="email" type="email" required id='email' placeholder="Email Address" {...register("email")} />
-                        <input  name='password' type="password" autoComplete='off' required id='password' placeholder='Password' {...register("password")} />
+                        <input  name="email" type="email" id='email' placeholder="Email Address" {...register("email",{required:true})} />
+                        <input  name='password' type="password" autoComplete='off'id='password' placeholder='Password' {...register("password",{required:true})} />
                         <button type='submit' id='submit-btn'>SIGN UP</button>
                         <h3>or signup with:</h3>
                         <div className='social'>
